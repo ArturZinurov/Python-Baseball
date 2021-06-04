@@ -8,7 +8,7 @@ game_frames = []
 for game_file in game_files:
     game_frame = pd.read_csv(game_file, names=['type', 'multi2', 'multi3', 'multi5', 'multi6', 'event'])
     game_frames.append(game_frame)
-game_frames = []
+
 
 games = pd.concat(game_frames)
 games.loc[games['multi5'] == '??', ['multi5']] = ''
